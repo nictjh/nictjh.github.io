@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+:root {
+  --primary-color: #018331;
+}
+
+body {
+  background-color: #122030;
+  margin: 0;
+  font-family: 'Roboto';
+}
+
+.navbar {
+  background-color: #122030;
+  padding: 32px;
+}
+
+.primary-Nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 70%;
+}
+
+.nav-item {
+  display: inline;
+  padding: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+}
+
+.nav-link span {
+  color: var(--primary-color);
+}
+
+.logo {
+  text-decoration: none;
+  text-shadow: 2px 2px;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+}
+
+.logo span {
+  color: var(--primary-color);
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.hero {
+  background-image: url("/images/junglebg2.jpg");
+}
+
+.photo-box img {
+  margin-right: 40%;
+  margin-left: 38%;
+  margin-bottom: 30px;
+  border-radius: 20%;
+  border: 3px solid black;
+}
+
+h4 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  margin: 0;
+}
+
+h5 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+  padding-bottom: 30px;
+}
+
+.box2 {
+  background-color: #122030;
+  color: white;
+  width: 100%;
+  border-bottom: solid #23363C;
+}
+
+.info {
+  background-color: #122030;
+  padding: 30px;
+  height: 250px;
+  border-bottom: solid #23363C;
+}
+
+h2 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 36px;
+  color: azure;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.info-details {
+  list-style-type: none;
+  margin: 20px;
+}
+
+.infoItem {
+  font-size: 20px;
+  color: #E5E4D7;
+  width: 50%;
+  float: left;
+  line-height: 60px;
+}
+
+.infoItem span {
+  font-weight: bold;
+  text-decoration: underline;
+  color: white;
+}
+
+.box4 {
+  background-color: #122030;
+  padding: 40px;
+  height: 300px;
+  border-bottom: solid #23363C;
+  padding-bottom: 0px;
+}
+
+.description {
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+  font-weight: none;
+  color: white;
+  text-shadow: 2px 2px;
+}
+
+.description span {
+  font-size: 58px;
+}
+
+.intro {
+  text-align: center;
+  font-style: italic;
+  font-size: 24px;
+  color: white;
+  margin: 0;
+}
+
+.education-details {
+  background-color: #122030;
+  width: 100;
+  padding: 30px;
+  margin: 0;
+  height: 800px;
+  border-bottom: solid #23363C;
+}
+
+.edu-ul {
+  padding: 30px;
+  margin: 0;
+}
+
+.photobox1 img {
+  height: 55%;
+  width: 55%;
+  margin-left: 20%;
+  margin-right: 20%;
+  border-radius: 10%;
+}
+
+.education1 {
+  list-style-type: none;
+  width: 600px;
+  float: left;
+  margin-left: 80px;
+}
+
+.education1 h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: #E5E4D7;
+  margin-top: 20px;
+}
+
+.education1 h3 span {
+  color: #FFCF79;
+}
+
+.info1 {
+  border: 2px solid black;
+  color: white;
+  padding: 10px;
+  font-size: 24px;
+  margin-top: 24px;
+}
+
+.education2 {
+  list-style-type: none;
+  width: 600px;
+  float: right;
+  margin-right: 80px;
+}
+
+.education2 h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  color: #E5E4D7;
+  margin-top: 20px;
+}
+
+.education2 h3 span {
+  color: #FFCF79;
+}
+
+.photobox2 img {
+  width: 30%;
+  height: 30%;
+  margin-right: 25%;
+  margin-left: 25%;
+  border-radius: 10%;
+}
+
+.info2 {
+  border: 2px solid black;
+  font-size: 24px;
+  padding: 30px;
+  margin-top: 60px;
+}
+
+.boldthis {
+  font-weight: bold;
+  color: white;
+}
+
+.cca {
+  background-color: #008432;
+  width: 100%;
+  height: 850px;
+  border-bottom: solid #23363C;
+}
+
+.cca h2 {
+  padding: 30px;
+}
+
+.cca-ul {
+  margin: 0;
+  padding: 0;
+}
+
+.polytime {
+  list-style-type: none;
+  width: 600px;
+  float: left;
+  padding: 30px;
+  margin-left: 80px;
+}
+
+.polytime h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  color: #92CD00;
+}
+
+.polytime h3 span {
+  color: #FFCF79;
+}
+
+.polytime ul {
+  font-size: 24px;
+  border: 2px solid black;
+  padding: 40px;
+  color: white;
+  margin-top: 50px;
+}
+
+.secsch {
+  list-style-type: none;
+  width: 600px;
+  float: right;
+  padding: 30px;
+  margin-right: 80px;
+}
+
+.secsch h3 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  color: #92CD00;
+}
+
+.secsch h3 span {
+  color: #FFCF79;
+}
+
+.secsch ul {
+  border: 2px solid black;
+  font-size: 24px;
+  padding: 40px;
+  color: white;
+}
+
+.testingpic img {
+  margin-left: 600px;
+}
+
+.work-exp {
+  height: 600px;
+  border-bottom: solid #23363C;
+}
+
+.work-exp h2 {
+  padding: 30px;
+}
+
+.work-exp img {
+  float: right;
+  margin-right: 200px;
+  width: 600px;
+  height: 400px;
+}
+
+.exp-ul {
+  border-left: 9px dotted #008432;
+  float: left;
+  margin-left: 80px;
+  width: 700px;
+}
+
+.exp-ul li {
+  list-style-type: upper-roman;
+  font-size: 24px;
+  color: white;
+  line-height: 58px;
+}
+
+.exp-ul li span {
+  color: #FFCF79;
+}
+
+.footer1 {
+  padding: 20px;
+}
+
+h6 {
+  font-size: 16px;
+  color: #b5b8b625;
+  text-align: center;
+  margin: 0;
+}
+
+.contact-info {
+  font-size: 20px;
+  text-align: center;
+}
+
+.contact-info li {
+  list-style-type: none;
+  display: inline;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+}
+
+.left-borders {
+  border-left: 2px solid silver;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  -webkit-font-feature-settings: 'liga';
+          font-feature-settings: 'liga';
+}
+/*# sourceMappingURL=css2.css.map */
