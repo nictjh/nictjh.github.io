@@ -468,3 +468,36 @@ h6{
     }
 
 }
+
+#auto-button{
+    font-size: 24px;
+    border-radius: 10%;
+    color:#008432;
+    background-color: #E5E4D7;
+    border:3px solid black;
+    cursor:pointer;
+    &:hover{
+        background-color: #FFCF79;
+        color: #92CD00;
+        border:3px solid white;
+    }
+
+}
+
+#stop-button{
+    font-size: 24px;
+    border-radius: 10%;
+    color:#008432;
+    background-color: #E5E4D7;
+    border:3px solid black;
+    cursor:pointer;
+    &:hover{
+        background-color: #FFCF79;
+        color: #92CD00;
+        border:3px solid white;
+    }
+
+}
+button{
+    margin-left: 10px;
+}

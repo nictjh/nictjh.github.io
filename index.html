@@ -173,6 +173,8 @@
         <p class="foloUpText">Only for bored souls~</p>
         <img src="/images/cookiealone.png" alt="cookiepicture" id="clickkk" onclick="clickCookie()">
         <p><span id="counter">00</span></p>
+        <button id="auto-button">Auto!</button>
+        <button id="stop-button">Stop!</button>
         <button id="reset-button">Reset</button>
     </div>
 
@@ -211,25 +213,28 @@
         var clickercount= 00;
         var appendCounter= document.getElementById("counter");
         var buttonReset= document.getElementById("reset-button");
+        var buttonAuto= document.getElementById("auto-button");
+        var buttonStop= document.getElementById("stop-button");
+        var Interval;
 
         function clickCookie() {
             clickercount++;
             appendCounter.innerHTML= clickercount;
 
-            if (clickercount==10){
-                window.alert("Thats 10 times already! Click another thousand more times for a prize :P");
-            }
             if (clickercount==20){
+                window.alert("Click another thousand more times for a prize :P");
+            }
+            if (clickercount==50){
                 window.alert("You are really bored huh!")
             }
-            if (clickercount==50) {
+            if (clickercount==100) {
                 window.alert("I think you need to stop")
             }
-            if (clickercount==60) {
+            if (clickercount==150) {
                 window.alert("Please get a life!")
             }
-            if (clickercount==100) {
-                window.alert("You are setting a high score here.")
+            if (clickercount==200) {
+                window.alert("You are setting a new high score here...")
             }
         }
 
@@ -239,7 +244,14 @@
             window.alert("Counter has been reset. You have finally got over it...");
         }
 
+        buttonAuto.onclick= function() {
+            Interval = setInterval(clickCookie,1000);
+            window.alert("Lazy and bored?!");
+        }
 
+        buttonStop.onclick = function() {
+            clearInterval(Interval);
+        }
 
     </script>
 
