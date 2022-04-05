@@ -403,4 +403,17 @@ h6 {
   -webkit-font-feature-settings: 'liga';
           font-feature-settings: 'liga';
 }
+
+.clock {
+  font-size: 36px;
+  font-family: 'Rubik Microbe', cursive;
+  color: white;
+  text-align: center;
+  border: 2px white solid;
+  -webkit-box-shadow: 1px 2px white;
+          box-shadow: 1px 2px white;
+  position: absolute;
+  padding: 20px;
+  left: 42.5%;
+}
 /*# sourceMappingURL=css2.css.map */

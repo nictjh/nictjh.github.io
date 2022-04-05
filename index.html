@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nicholas's Portfolio</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Rubik+Microbe&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css2/css2.css">
     
 </head>
@@ -160,18 +163,37 @@
         </section>
     </footer>
 
-    <button id="test" onclick="myAlert()">MoreInfo</button>
+    <div id="clockdisplay" class="clock"></div>
 
     <script>
 
-        function myFunction() {
-            document.getElementById("test").innerHTML = "sick change!";
-        }
+        function showTime() {
+            var d = new Date();
+            var h= d.getHours();
+            var m= d.getMinutes();
+            var s= d.getSeconds();
+            var session = "AM";
 
-        function myAlert() {
-            window.alert("HELLO")
-        }
+            if (h>12) {
+                session = "PM";
+                h=h-12;
+            }
+            if (s<10){
+                s= "0"+s;
+            }
+            if (m<10){
+                m= "0"+m;
+            }
+            if (h<10){
+                h= "0"+h;
+            }
 
+            var time = h + ":" + m + ":" + s + " " + session;
+            document.getElementById("clockdisplay").innerHTML=time;
+
+            setTimeout(showTime, 1000)//function to run every 1 second to update
+        }
+        showTime();
 
     </script>
 
