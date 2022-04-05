@@ -416,4 +416,58 @@ h6 {
   padding: 20px;
   left: 42.5%;
 }
+
+.clk {
+  height: 100px;
+}
+
+.cookie-clicker {
+  text-align: center;
+  padding: 30px;
+  width: 600px;
+  position: absolute;
+  left: 33%;
+  margin-top: 30px;
+}
+
+.cookhead {
+  font-size: 58px;
+  color: white;
+  font-family: 'Rubik Microbe';
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.foloUpText {
+  font-size: 24px;
+  color: white;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+#clickkk {
+  cursor: pointer;
+}
+
+#counter {
+  font-size: 80px;
+  text-decoration: underline;
+  color: #008432;
+  font-family: 'Rubik Microbe', cursive;
+}
+
+#reset-button {
+  font-size: 24px;
+  border-radius: 10%;
+  color: #008432;
+  background-color: #E5E4D7;
+  border: 3px solid black;
+  cursor: pointer;
+}
+
+#reset-button:hover {
+  background-color: #FFCF79;
+  color: #92CD00;
+  border: 3px solid white;
+}
 /*# sourceMappingURL=css2.css.map */
