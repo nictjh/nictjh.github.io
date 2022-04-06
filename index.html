@@ -163,12 +163,23 @@
         </section>
     </footer>
 
-    <section class="clk">
+
+    <section class="bottomBar">
+        <ul class="bottomBarItems">
+            <li class="itemsBB" onclick="seeClock()">Clock Display</li>
+            <li class="itemsBB" onclick="seeCookie()">Cookie Clicker</li>
+            <li class="itemsBB" onclick="seeCounter()">Count Down Timer</li>
+            <li class="itemsBB" onclick="closeExtra()">Close</li>
+        </ul>
+    </section>
+
+
+    <section class="clk" id="clockSection">
         <div id="clockdisplay" class="clock"></div>
     </section>
 
 
-    <div class="cookie-clicker">
+    <div class="cookie-clicker" id="cookieSection">
         <p class="cookhead">Cookie Clicker</p>
         <p class="foloUpText">Only for bored souls~</p>
         <img src="/images/cookiealone.png" alt="cookiepicture" id="clickkk" onclick="clickCookie()">
@@ -179,8 +190,26 @@
     </div>
 
 
+    <div class="CountDown" id="countSection">
+        <p class="cdheader">CountDown!~~</p>
+        <p>Please specifiy the countdown timings down below, FILL IN EVERY BOX with a number.</p>
+        <input type="text" id="dateInput" placeholder="Enter Days">
+        <input type="text" id="hoursInput" placeholder="Enter Hours">
+        <input type="text" id="minutesInput" placeholder="Enter Minutes">
+        <input type="text" id="secondsInput" placeholder="Enter Seconds"><br><br>
+        <button id="submit-button">Submit</button>
+        <p class="outputCount">
+            <span id="date">--</span> Days : <span id="hours">--</span> Hours : <span id="minutes">--</span> Minutes : <span id="seconds">--</span> Seconds
+        </p>
+        <button id="start-Button">Start Timer!</button>
+        <button id="stop-Button">Stop</button>
+        <button id="reset-Button">Reset</button>
+    </div>
+
+
     <script>
 
+        //Clock Functions
         function showTime() {
             //initialising variables
             var d = new Date();
@@ -209,8 +238,9 @@
             setTimeout(showTime, 1000)//function to run every 1 second to update
         }
         showTime();
+        //Clock End~
 
-        
+        //CookieClicker functions
         var clickercount= 00;
         var appendCounter= document.getElementById("counter");
         var buttonReset= document.getElementById("reset-button");
@@ -253,6 +283,125 @@
         buttonStop.onclick = function() {
             clearInterval(Interval);
         }
+        //CookieClicker End~
+
+        //Nav Bar Functions
+        function seeClock() {
+            document.getElementById("clockSection").style.display="block";
+            document.getElementById("cookieSection").style.display="none";
+            document.getElementById("countSection").style.display="none";
+        }
+
+        function seeCookie() {
+            document.getElementById("clockSection").style.display="none";
+            document.getElementById("cookieSection").style.display="block";
+            document.getElementById("countSection").style.display="none";
+        }
+
+        function seeCounter() {
+            document.getElementById("clockSection").style.display="none";
+            document.getElementById("cookieSection").style.display="none";
+            document.getElementById("countSection").style.display="block";
+        }
+
+        function closeExtra() {
+            document.getElementById("clockSection").style.display="none";
+            document.getElementById("cookieSection").style.display="none";
+            document.getElementById("countSection").style.display="none";
+        }
+
+        document.getElementById("clockSection").style.display="none";
+        document.getElementById("cookieSection").style.display="none";
+        document.getElementById("countSection").style.display="none";
+        //NavBar End!~
+
+        //CountDown Functions
+        var appendDate= document.getElementById("date");
+        var appendHours= document.getElementById("hours");
+        var appendMins= document.getElementById("minutes");
+        var appendSeconds= document.getElementById("seconds");
+        var getSeconds= 00;
+        var getMinutes= 00;
+        var getHours= 00;
+        var getDate= 00;
+        var Interval;
+
+        //Receiving Inputs and storing into HTML
+        document.getElementById("submit-button").onclick=function() {
+
+            getDate= document.getElementById("dateInput").value;
+            getHours= document.getElementById("hoursInput").value;
+            getMinutes= document.getElementById("minutesInput").value;
+            getSeconds= document.getElementById("secondsInput").value;
+
+            appendDate.innerHTML = getDate;
+            appendHours.innerHTML= getHours;
+            appendMins.innerHTML= getMinutes;
+            appendSeconds.innerHTML= getSeconds;
+        }
+
+        document.getElementById("stop-Button").onclick=function(){
+            clearInterval(Interval);
+        }
+
+        document.getElementById("reset-Button").onclick=function() {
+
+            clearInterval(Interval);
+            getDate= "--";
+            getHours= "--";
+            getMinutes= "--";
+            getSeconds= "--";
+            appendDate.innerHTML = getDate;
+            appendHours.innerHTML= getHours;
+            appendMins.innerHTML= getMinutes;
+            appendSeconds.innerHTML= getSeconds;
+        }
+
+        document.getElementById("start-Button").onclick=function() {
+
+            Interval=setInterval(startCount,1000); //set function to work every second
+
+        }
+
+        function startCount() {
+
+            getSeconds--;
+            appendSeconds.innerHTML=getSeconds;
+
+            if (getSeconds==0){
+
+                if (getMinutes==0){
+
+                    if (getHours==0){
+
+                        if (getDate==0){
+                            clearInterval(Interval);
+                            window.alert("Time is UP!");
+                            location.reload();
+                        }
+
+                        getDate--;
+                        getHours=24;
+                        appendDate.innerHTML=getDate;
+                        appendHours.innerHTML=getHours;
+                    }
+
+                    getHours--;
+                    getMinutes=60;
+                    appendHours.innerHTML=getHours;
+                    appendMins.innerHTML=getMinutes;
+                }
+
+                getMinutes--;
+                getSeconds=59;
+                appendSeconds.innerHTML=getSeconds;
+                appendMins.innerHTML=getMinutes;
+        
+            }
+            
+        }
+
+
 
     </script>
 

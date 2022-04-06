@@ -501,3 +501,63 @@ h6{
 button{
     margin-left: 10px;
 }
+
+
+.bottomBarItems{
+    list-style-type: none;
+    background-color: black;
+    text-align: center;
+    height:50px;
+    padding:50px;
+}
+
+.itemsBB{
+    display:inline;
+    color:white;
+    font-size:36px;
+    padding:40px;
+    cursor:pointer;
+    &:hover{
+        color: var(--primary-color);
+        background-color: #122030;
+        border-radius: 30%;
+    }
+}
+
+.CountDown{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:30px;
+    height:700px;
+
+    .cdheader{
+        font-size:64px;
+        color:#92CD00;
+        margin-bottom:0;
+    }
+    p{
+        color:red;
+    }
+}
+
+.outputCount{
+
+    margin-top:80px;
+    margin-bottom:80px;
+    span{
+        font-size:100px;
+        color:white;
+    }
+}
+
+button{
+    font-size: 16px;
+    border-radius: 4px;
+    border:3px solid white;
+    &:hover{
+        color:white;
+        background-color: black;
+        border:2px solid white;
+    }
+}
