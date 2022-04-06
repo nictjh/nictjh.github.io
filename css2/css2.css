@@ -570,4 +570,9 @@ button:hover {
   background-color: black;
   border: 2px solid white;
 }
+
+input {
+  width: 6%;
+  height: 5%;
+}
 /*# sourceMappingURL=css2.css.map */

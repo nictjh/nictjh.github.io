@@ -193,10 +193,10 @@
     <div class="CountDown" id="countSection">
         <p class="cdheader">CountDown!~~</p>
         <p>Please specifiy the countdown timings down below, FILL IN EVERY BOX with a number.</p>
-        <input type="text" id="dateInput" placeholder="Enter Days">
-        <input type="text" id="hoursInput" placeholder="Enter Hours">
-        <input type="text" id="minutesInput" placeholder="Enter Minutes">
-        <input type="text" id="secondsInput" placeholder="Enter Seconds"><br><br>
+        <input type="number" id="dateInput" placeholder="Enter Days">
+        <input type="number" id="hoursInput" placeholder="Enter Hours">
+        <input type="number" id="minutesInput" placeholder="Enter Minutes">
+        <input type="number" id="secondsInput" placeholder="Enter Seconds"><br><br>
         <button id="submit-button">Submit</button>
         <p class="outputCount">
             <span id="date">--</span> Days : <span id="hours">--</span> Hours : <span id="minutes">--</span> Minutes : <span id="seconds">--</span> Seconds
@@ -368,7 +368,7 @@
             getSeconds--;
             appendSeconds.innerHTML=getSeconds;
 
-            if (getSeconds==0){
+            if (getSeconds<=0){
 
                 if (getMinutes==0){
 
